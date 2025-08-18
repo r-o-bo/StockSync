@@ -1,5 +1,8 @@
 import mysql.connector
+from dotenv import load_dotenv
 import os
+
+load_dotenv()
 
 def db_connection():
     conn = mysql.connector.connect(
