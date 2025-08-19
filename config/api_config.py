@@ -14,7 +14,9 @@ needed_headers = {
     'x-rapidapi-key': API_KEY,
     'x-rapidapi-host': "yahoo-finance127.p.rapidapi.com"
 }
+
 symbol = "eth-usd"
+
 # uh path parameter not query string param!!!!
 my_url = f"{base_url}/price/{symbol}"
 
