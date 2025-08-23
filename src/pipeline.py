@@ -1,8 +1,8 @@
-from database import create_db_connection
-from load import create_table, insert_into_table
-from transform import transform_data
-from extract import my_crypto_summary
-from api_config import check_rate_lim
+from config.database import create_db_connection
+from src.load import create_table, insert_into_table
+from src.transform import transform_data
+from src.extract import my_crypto_summary
+from config.api_config import check_rate_lim
 
 def run_data_pipeline():
     # Check API rate limits before running extraction
@@ -34,7 +34,7 @@ def run_data_pipeline():
 
     finally:
         conn.close()
-        print("🔒 Database connection closed.")
+        print("Database connection closed.")
 
 
 if __name__ == "__main__":
