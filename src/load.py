@@ -2,7 +2,7 @@ import mysql.connector
 from mysql.connector import Error
 from database import db_connection
 
-def create_table():
+def create_table(db_connection):
     CREATE_TABLE_SQL_QUERY = ("""
         CREATE TABLE IF NOT EXISTS eth_prices (
             id INT AUTO_INCREMENT PRIMARY KEY,
@@ -28,4 +28,21 @@ def create_table():
 
     except Error as e:
         print(f"[CREATING TABLE ERROR]: '{e}'")
-  
+
+def insert_into_table(db_connection, df):
+    """
+    Insert data in the database from the dataframe
+    """
+    cursor = db_connection.cursor()
+
+    INSERT_DATA_SQL_QUERY = """
+    
+    """
+    # Create a list of tuples from the dataframe values
+    data_values_as_tuples = [tuple(x) for x in df.to_numpy()]
+
+    # Execute the query
+    cursor.executemany(INSERT_DATA_SQL_QUERY, data_values_as_tuples)
+    db_connection.commit()
+    print("Data inserted or updated successfully!")
+    pass
