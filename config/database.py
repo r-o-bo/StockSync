@@ -5,7 +5,7 @@ import os
 
 load_dotenv()
 
-def dreate_db_connection():
+def create_db_connection():
     db_connection = None
     try:
         db_connection = mysql.connector.connect(

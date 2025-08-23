@@ -28,6 +28,10 @@ def create_table(db_connection):
 
     except Error as e:
         print(f"[CREATING TABLE ERROR]: '{e}'")
+    finally:
+        cursor.close()
+        print("Database cursor closed.")
+        
 
 def insert_into_table(db_connection, df):
     """
@@ -36,13 +40,17 @@ def insert_into_table(db_connection, df):
     cursor = db_connection.cursor()
 
     INSERT_DATA_SQL_QUERY = """
-    
+        INSERT INTO eth_prices (
+            symbol, name, price, change, percent_change, volume,
+            market_cap, week_high, week_low, logo, last_updated, transformed_at
+        ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
     """
-    # Create a list of tuples from the dataframe values
+    
+    # this creates a list of tuples from the dataframe values
     data_values_as_tuples = [tuple(x) for x in df.to_numpy()]
 
     # Execute the query
     cursor.executemany(INSERT_DATA_SQL_QUERY, data_values_as_tuples)
     db_connection.commit()
     print("Data inserted or updated successfully!")
-    pass
+    
