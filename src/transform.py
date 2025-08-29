@@ -8,7 +8,7 @@ def transform_data(summary):
     summary["transformed_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
     
     summary["price"] = float(summary.get("price", 0))
-    summary["change"] = float(summary.get("change", 0))
+    summary["price_change"] = float(summary.get("price_change", 0))
     summary["volume"] = int(summary.get("volume", 0))
     summary["market_cap"] = int(summary.get("market_cap", 0))
     summary["week_high"] = float(summary.get("week_high", 0))
@@ -16,7 +16,7 @@ def transform_data(summary):
 
     # Order columns exactly as in eth_prices
     columns = [
-        "symbol", "name", "price", "change", "percent_change",
+        "symbol", "name", "price", "price_change", "percent_change",
         "volume", "market_cap", "week_high", "week_low",
         "logo", "last_updated", "transformed_at"
     ]

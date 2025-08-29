@@ -53,15 +53,15 @@ def check_rate_lim():
 # check_rate_lim() call to check rate limits
 
 # API call for json data
-res2 = requests.get(url=my_url,headers=needed_headers)
+#res2 = requests.get(url=my_url,headers=needed_headers)
 
-if res2.status_code == 200:
-    data = res2.json()
+#if res2.status_code == 200:
+   # data = res2.json()
 
-    print(json.dumps(data,indent=2))
+   # print(json.dumps(data,indent=2))
 
-else:
-    print("failed to fetch data from API")
+#else:
+   # print("failed to fetch data from API")
 
     
 

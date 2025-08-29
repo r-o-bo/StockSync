@@ -30,7 +30,7 @@ def my_crypto_summary():
             # price is price
             "price": data.get("regularMarketPrice", {}).get("raw"),
             # gets raw price change
-            "change": data.get("regularMarketChange", {}).get("raw"),
+            "price_change": data.get("regularMarketChange", {}).get("raw"),
             # gets the formatted percent str
             "percent_change": data.get("regularMarketChangePercent", {}).get("fmt"),
             # gets the trading volume
@@ -38,9 +38,9 @@ def my_crypto_summary():
             # market capitialization value
             "market_cap": data.get("marketCap", {}).get("raw"),
             # highest value in last year
-            "52_week_high": data.get("fiftyTwoWeekHigh", {}).get("raw"),
+            "week_high": data.get("fiftyTwoWeekHigh", {}).get("raw"),
             # lowest value in last year
-            "52_week_low": data.get("fiftyTwoWeekLow", {}).get("raw"),
+            "week_low": data.get("fiftyTwoWeekLow", {}).get("raw"),
             # gets teh coins logo
             "logo": data.get("logoUrl"),
             # most recent market update
