@@ -6,7 +6,6 @@ from datetime import datetime, timezone
 def transform_data(summary):
     # Coordinated Universal Time (UTC) and format it into an ISO 8601 string
     summary["transformed_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
-    
     summary["price"] = float(summary.get("price", 0))
     summary["price_change"] = float(summary.get("price_change", 0))
     summary["volume"] = int(summary.get("volume", 0))
