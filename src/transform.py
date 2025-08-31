@@ -24,6 +24,7 @@ def transform_data(summary):
     return df
 
 
+
 if __name__ == "__main__":
     from extract import my_crypto_summary
 
