@@ -1,3 +1,4 @@
+import pandas as pd
 import mysql.connector
 from mysql.connector import Error
 from config.database import create_db_connection
@@ -59,7 +60,7 @@ def insert_into_table(db_connection, df):
     """
     
     # this creates a list of tuples from the dataframe values
-    data_values_as_tuples = [tuple(x) for x in df.to_numpy()]
+    data_values_as_tuples = [tuple(x) for x in df.to_numpy()] # this should hopefully get rid of null exceptions
 
     # Execute the query
     try:

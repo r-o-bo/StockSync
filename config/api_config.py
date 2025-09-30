@@ -50,7 +50,8 @@ def check_rate_lim():
 
         return None
 
-# check_rate_lim() call to check rate limits
+
+check_rate_lim() 
 
 # API call for json data
 #res2 = requests.get(url=my_url,headers=needed_headers)
