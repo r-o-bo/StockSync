@@ -60,8 +60,7 @@ def insert_into_table(db_connection, df):
     """
     
     # this creates a list of tuples from the dataframe values
-    data_values_as_tuples = [tuple(x) for x in df.to_numpy()] # this should hopefully get rid of null exceptions
-
+    data_values_as_tuples = [tuple(x) for x in df.to_numpy()] 
     # Execute the query
     try:
         cursor.executemany(INSERT_DATA_SQL_QUERY, data_values_as_tuples)
