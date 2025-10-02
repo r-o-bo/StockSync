@@ -25,7 +25,7 @@ It fetches **Ethereum (ETH) price data** from the Yahoo Finance API (via RapidAP
 * **Libraries:**
 
   * `requests` — API calls
-  * `pandas` — data wrangling
+  * `pandas` — data management
   * `mysql-connector-python` — database connection
   * `python-dotenv` — load secrets from `.env`
 
@@ -52,8 +52,13 @@ ETLpy/
 ```
 
 ---
+## 🔑 Get an API Key
 
-## 🔑 Environment Variables
+1. Sign up or log in at [Yahoo Finance RapidAPI](https://rapidapi.com/manwilbahaa/api/yahoo-finance127).  
+2. Go to the price endpoint and copy the key.
+
+---
+##  Environment Variables
 
 Set up a `.env` file in the project root:
 
