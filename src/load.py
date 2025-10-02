@@ -39,6 +39,10 @@ def insert_into_table(db_connection, df):
     """
     Insert data in the database from the dataframe
     """
+    if df is None or df.empty:
+        print("Skipping insert: DataFrame is None or empty")
+        return
+    
     cursor = db_connection.cursor()
 
     INSERT_DATA_SQL_QUERY = """
@@ -61,6 +65,12 @@ def insert_into_table(db_connection, df):
     
     # this creates a list of tuples from the dataframe values
     data_values_as_tuples = [tuple(x) for x in df.to_numpy()] 
+
+
+    # debug
+    print("Data to insert: ", data_values_as_tuples)
+
+
     # Execute the query
     try:
         cursor.executemany(INSERT_DATA_SQL_QUERY, data_values_as_tuples)

@@ -3,6 +3,7 @@ from src.load import create_table, insert_into_table
 from src.transform import transform_data
 from src.extract import my_crypto_summary
 from config.api_config import check_rate_lim
+import time
 
 def run_data_pipeline():
     # Check API rate limits before running extraction
@@ -38,4 +39,7 @@ def run_data_pipeline():
 
 
 if __name__ == "__main__":
-    run_data_pipeline()
+    for i in range(50):
+        run_data_pipeline()
+        time.sleep(2)
+    

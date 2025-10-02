@@ -21,8 +21,7 @@ def transform_data(summary):
     ]
     df = pd.DataFrame([summary], columns=columns)
 
-    row = df.iloc[0]  # first row
-    return tuple(row.values)
+    return df
 
 
 
