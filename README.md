@@ -77,7 +77,7 @@ MYSQL_DATABASE=ur_db
 1. **Clone the repo**
 
    ```bash
-   git clone https://github.com/r-o-bo/StockSync.git
+   git clone https://github.com/r-o-bo/StockSync
    cd ETLpy
    ```
 
