@@ -44,6 +44,7 @@ ETLpy/
 │   ├── pipeline.py      # Orchestrates the ETL flow
 │── config/
 │   └── database.py      # Database connection setup
+│   └── api_config.py    # API configuration
 │── .env                 
 │── requirements.txt     
 │── README.md
