@@ -4,12 +4,12 @@
 A simple **ETL data (Extract–Transform–Load) pipeline** built in Python.
 It fetches **Ethereum (ETH) price data** from the Yahoo Finance API (via RapidAPI), transforms it using **pandas**, and loads it into a **MySQL database** for analysis.<br> <br>
 
-![Pipeline Diagram](assets/ETLarch.png)
+![Pipeline Diagram](assets/ETLarchbetter.png)
 
 
 ---
 
-## 📌 Features
+## Features
 
 * **Extract** real-time crypto price data from the [Yahoo Finance RapidAPI](https://rapidapi.com/manwilbahaa/api/yahoo-finance127).
 * **Transform** raw API JSON into a clean, structured Pandas DataFrame.
@@ -18,7 +18,7 @@ It fetches **Ethereum (ETH) price data** from the Yahoo Finance API (via RapidAP
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 * **Python 3.10+**
 * **MySQL** (local or remote, tested with MySQL Workbench)
@@ -31,7 +31,7 @@ It fetches **Ethereum (ETH) price data** from the Yahoo Finance API (via RapidAP
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 ETLpy/
@@ -53,7 +53,7 @@ ETLpy/
 ```
 
 ---
-## 🔑 Get an API Key
+## Get an API Key
 
 1. Sign up or log in at [Yahoo Finance RapidAPI](https://rapidapi.com/manwilbahaa/api/yahoo-finance127).  
 2. Go to the price endpoint and copy the key.
@@ -73,7 +73,7 @@ MYSQL_DATABASE=ur_db
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. **Clone the repo**
 
@@ -121,7 +121,7 @@ MYSQL_DATABASE=ur_db
    ```
 ---
 
-## 📊 Schema
+## Schema
 
 id (PK) | symbol  | name         | price   | price_change | percent_change | volume      | market_cap   | week_high | week_low  | logo | last_updated | transformed_at      |
 ----    | ------- | ------------ | ------- | ------------ | -------------- | ----------- | ------------ | --------- | --------- | ---- | ------------ | ------------------- |
@@ -130,7 +130,7 @@ id (PK) | symbol  | name         | price   | price_change | percent_change | vol
 ---
 
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License.
 
